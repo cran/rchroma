@@ -4,9 +4,9 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-## ----eval=FALSE---------------------------------------------------------------
-# # install.packages("remotes")
-# remotes::install_github("cynkra/rchroma")
+## ----eval = FALSE-------------------------------------------------------------
+# chroma_docker_run()
+# # use chroma_docker_stop() to stop the container
 
 ## ----eval=FALSE---------------------------------------------------------------
 # library(rchroma)
@@ -36,9 +36,9 @@ knitr::opts_chunk$set(
 #   "carrot vegetable"
 # )
 # embeddings <- list(
-#   c(1.0, 0.0, 0.0),  # apple
-#   c(0.8, 0.2, 0.0),  # banana (similar to apple)
-#   c(0.0, 0.0, 1.0)   # carrot (different)
+#   c(1.0, 0.0, 0.0), # apple
+#   c(0.8, 0.2, 0.0), # banana (similar to apple)
+#   c(0.0, 0.0, 1.0) # carrot (different)
 # )
 # 
 # # Add documents to the collection
@@ -54,7 +54,7 @@ knitr::opts_chunk$set(
 # results <- query(
 #   client,
 #   "my_collection",
-#   query_embeddings = list(c(1.0, 0.0, 0.0)),  # should match apple best
+#   query_embeddings = list(c(1.0, 0.0, 0.0)), # should match apple best
 #   n_results = 2
 # )
 
@@ -64,9 +64,9 @@ knitr::opts_chunk$set(
 #   client,
 #   "my_collection",
 #   ids = "doc1",
-#   embeddings = list(c(0.9, 0.1, 0.0))  # slightly different from original apple
+#   embeddings = list(c(0.9, 0.1, 0.0)) # slightly different from original apple
 # )
 # 
 # # Delete documents
-# delete_documents(client, "my_collection", ids = "doc2")  # removes banana
+# delete_documents(client, "my_collection", ids = "doc2") # removes banana
 
